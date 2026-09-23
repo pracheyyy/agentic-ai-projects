@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results — ResumePilot AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/results.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">R</span>
+      <span>Resume<span class="brand-accent">Pilot</span><small> AI</small></span>
+    </a>
+    <div class="result-actions">
+      <button class="btn btn-ghost" onclick="window.print()">↓ Download Report</button>
+      <a class="btn btn-primary" href="analyze.html">Analyze Another Job</a>
+    </div>
+  </header>
+
+  <main class="results-page">
+    <div class="results-head">
+      <div>
+        <a href="analyze.html" class="back-link">← Analyze another role</a>
+        <div class="eyebrow">Resume analysis results</div>
+        <h1>Your resume matches this role.</h1>
+        <p>Here is what is working, what is missing, and what you can improve next.</p>
+      </div>
+    </div>
+
+    <section class="job-card">
+  <div class="company-logo">JD</div>
+
+  <div>
+    <h2>Target Job Description</h2>
+    <p>Job description analyzed by ResumePilot AI</p>
+  </div>
+
+  <span class="status-pill">
+    Target role
+  </span>
+</section>
+
+    <div class="tabs">
+      <button class="tab active">Overview</button><button class="tab">Skill Match</button><button class="tab">Improvements</button><button class="tab">Resume Sections</button><button class="tab">Keywords</button>
+    </div>
+
+    <section class="top-results">
+      <div class="score-card panel">
+        <div class="score-ring big" style="--score:82"><div><strong>82</strong><small>/100</small></div></div>
+        <div class="score-copy"><div class="eyebrow">ATS readiness score</div><h2>Good starting point</h2><p>Your resume has strong alignment with this role. A few targeted changes could improve its match.</p><span class="trend">↑ 14% potential improvement</span></div>
+      </div>
+
+      <div class="summary-card panel">
+        <h3>Match Summary</h3>
+        <div class="summary-row"><span class="summary-icon green">✓</span><div><strong>12</strong><small>Skills matched</small></div></div>
+        <div class="summary-row"><span class="summary-icon orange">!</span><div><strong>4</strong><small>Partial matches</small></div></div>
+        <div class="summary-row"><span class="summary-icon red">×</span><div><strong>3</strong><small>Missing skills</small></div></div>
+      </div>
+    </section>
+
+    <section class="result-grid">
+      <div class="panel skill-panel">
+        <div class="panel-header"><div><h3>Skill Match Breakdown</h3><p>How strongly your resume represents the target requirements.</p></div></div>
+        <div class="metric"><div><span>Skills</span><b>88%</b></div><div class="bar"><i style="width:88%"></i></div></div>
+        <div class="metric"><div><span>Keywords</span><b>76%</b></div><div class="bar"><i style="width:76%"></i></div></div>
+        <div class="metric"><div><span>Experience</span><b>81%</b></div><div class="bar"><i style="width:81%"></i></div></div>
+        <div class="metric"><div><span>Projects</span><b>84%</b></div><div class="bar"><i style="width:84%"></i></div></div>
+        <div class="metric"><div><span>Education</span><b>95%</b></div><div class="bar green-bar"><i style="width:95%"></i></div></div>
+        <div class="metric"><div><span>Formatting</span><b>91%</b></div><div class="bar green-bar"><i style="width:91%"></i></div></div>
+      </div>
+
+      <div class="panel job-match">
+        <div class="panel-header"><div><h3>Job Match</h3><p>Requirement evidence found in your resume.</p></div></div>
+        <div class="match-tabs"><span class="active">Matched (12)</span><span>Partial (4)</span><span>Missing (3)</span></div>
+        <div class="skill-list">
+          <span>✓ Java</span><span>✓ Python</span><span>✓ Data Structures</span><span>✓ Algorithms</span><span>✓ Git</span><span>✓ SQL</span><span>✓ Problem Solving</span><span>+ 5 more</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="improvement-section">
+      <div class="section-heading left">
+        <div class="eyebrow">What to improve next</div>
+        <h2>Personalized improvement plan</h2>
+        <p>Suggestions are grounded in the resume evidence we found.</p>
+      </div>
+
+      <div class="improvement-grid">
+        <div class="panel suggestions">
+          <article class="suggestion high">
+            <div class="priority">High Priority</div>
+            <h3>Add Spring Boot evidence</h3>
+            <p>Spring Boot appears in the job description but no supporting evidence was found in your resume.</p>
+            <a href="#">View suggestion →</a>
+          </article>
+          <article class="suggestion medium">
+            <div class="priority">Medium Priority</div>
+            <h3>Strengthen REST API description</h3>
+            <p>Your project mentions backend APIs but does not clearly describe REST API work.</p>
+            <a href="#">View evidence →</a>
+          </article>
+          <article class="suggestion low">
+            <div class="priority">Low Priority</div>
+            <h3>Add measurable project impact</h3>
+            <p>Where truthful, add numbers such as users, latency, accuracy, performance or scale.</p>
+            <a href="#">Improve section →</a>
+          </article>
+        </div>
+
+        <div class="panel resume-preview">
+          <div class="preview-head"><h3>Resume Preview</h3><span>PDF</span></div>
+          <div class="paper">
+            <div class="paper-title">Prachi Patil</div><div class="paper-line wide"></div><div class="paper-line"></div>
+            <div class="paper-heading"></div><div class="paper-line wide"></div><div class="paper-line"></div><div class="paper-line medium"></div>
+            <div class="paper-heading"></div><div class="paper-line wide"></div><div class="paper-line"></div><div class="paper-line"></div><div class="paper-line medium"></div>
+            <div class="paper-heading"></div><div class="paper-line wide"></div><div class="paper-line medium"></div>
+          </div>
+          <button class="btn btn-secondary full">View Full Resume</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="success-banner">
+      <span>✓</span><div><strong>You're on the right track.</strong><p>Apply the high-priority suggestions first, then run another analysis to track your progress.</p></div>
+      <a class="btn btn-primary" href="analyze.html">Analyze Again →</a>
+    </section>
+  </main>
+
+  <script src="../js/results.js"></script>
+</body>
+</html>

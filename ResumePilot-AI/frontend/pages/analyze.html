@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analyze Resume — ResumePilot AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/analyze.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">R</span>
+      <span>Resume<span class="brand-accent">Pilot</span><small> AI</small></span>
+    </a>
+    <a class="btn btn-ghost" href="../index.html">← Back Home</a>
+  </header>
+
+  <main class="analyze-page">
+    <div class="page-heading">
+      <div class="eyebrow">Resume analysis</div>
+      <h1>Let's see how your resume matches the job.</h1>
+      <p>Upload your current resume and paste the complete job description you're targeting.</p>
+    </div>
+
+    <form id="analyzeForm" class="analyze-grid">
+      <section class="panel">
+        <div class="panel-title">
+          <div><span class="step-number">01</span><div><h2>Your Resume</h2><p>PDF or DOCX · Max 5 MB</p></div></div>
+        </div>
+
+        <label class="upload-zone" id="dropZone" for="resumeFile">
+          <input id="resumeFile" type="file" accept=".pdf,.doc,.docx" hidden />
+          <div class="upload-icon">↑</div>
+          <h3 id="uploadTitle">Drop your resume here</h3>
+          <p id="uploadText">or <u>browse files</u></p>
+          <span class="file-name" id="fileName">No file selected</span>
+        </label>
+
+        <div class="resume-note">Your resume will be analyzed for structure, skills, keywords, experience and job relevance.</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <div><span class="step-number">02</span><div><h2>Job Description</h2><p>Paste the complete target role</p></div></div>
+        </div>
+
+        <textarea id="jobDescription" maxlength="10000" placeholder="Paste the job description here...
+
+Example:
+Software Engineer Intern
+Requirements:
+• Java
+• Spring Boot
+• SQL
+• REST APIs
+• Git
+• Data Structures
+• OOP"></textarea>
+        <div class="textarea-footer"><span>Include requirements and preferred skills for better matching.</span><span id="charCount">0 / 10,000</span></div>
+      </section>
+
+      <section class="panel full-width">
+        <div class="privacy-row">
+          <span class="shield">✓</span>
+          <div><strong>Built for transparent analysis</strong><p>We will show why a match was detected instead of giving you a black-box number.</p></div>
+        </div>
+        <button class="btn btn-primary btn-lg analyze-btn" type="submit" id="analyzeBtn">Analyze My Resume <span>→</span></button>
+      </section>
+    </form>
+  </main>
+
+  <script src="../js/analyze.js"></script>
+</body>
+</html>

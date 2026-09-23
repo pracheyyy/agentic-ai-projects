@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analyzing — ResumePilot AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/analysis.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">R</span>
+      <span>Resume<span class="brand-accent">Pilot</span><small> AI</small></span>
+    </a>
+    <div class="analysis-status">AI analysis in progress</div>
+  </header>
+
+  <main class="analysis-page">
+    <div class="analysis-card">
+      <div class="analysis-orb"><div class="orb-core">✦</div></div>
+      <div class="eyebrow">ResumePilot AI</div>
+      <h1>Analyzing your resume</h1>
+      <p>This usually takes about 10–15 seconds.</p>
+
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="progress-percent"><span id="progressText">0%</span><span>Preparing analysis</span></div>
+
+      <div class="timeline">
+        <div class="timeline-item active" data-step="1"><span class="timeline-dot">✓</span><div><strong>Reading your resume</strong><small>Extracting text and structure from your file...</small></div></div>
+        <div class="timeline-item" data-step="2"><span class="timeline-dot">2</span><div><strong>Analyzing ATS structure</strong><small>Checking sections, formatting and readability...</small></div></div>
+        <div class="timeline-item" data-step="3"><span class="timeline-dot">3</span><div><strong>Matching the job description</strong><small>Comparing skills, keywords and experience...</small></div></div>
+        <div class="timeline-item" data-step="4"><span class="timeline-dot">4</span><div><strong>Generating personalized insights</strong><small>Finding gaps and improvement opportunities...</small></div></div>
+        <div class="timeline-item" data-step="5"><span class="timeline-dot">5</span><div><strong>Finalizing your report</strong><small>Preparing your evidence-backed results...</small></div></div>
+      </div>
+    </div>
+
+    <div class="tip-card"><span>💡</span><div><strong>While you wait</strong><p>Good resumes are tailored to the role. We'll focus on what the job actually asks for.</p></div></div>
+  </main>
+
+  <script src="../js/analysis.js"></script>
+</body>
+</html>
