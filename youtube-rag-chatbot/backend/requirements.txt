@@ -1,0 +1,31 @@
+fastapi
+uvicorn
+youtube-transcript-api
+python-dotenv
+langchain
+langchain-community
+langchain-openai
+faiss-cpu
+
+# fast api 
+fastapi
+uvicorn
+youtube-transcript-api
+pydantic
+
+# text splitter 
+fastapi
+uvicorn
+youtube-transcript-api
+pydantic
+langchain-text-splitters
+
+# hugging face
+huggingface_hub
+
+# FAISS
+faiss-cpu
+langchain-community
+
+
+# give : pip install -r requirements.txt
