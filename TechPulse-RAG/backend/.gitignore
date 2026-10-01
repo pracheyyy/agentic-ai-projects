@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.env
+
+data/raw/*.json
+data/processed/*
+data/vectorstore/*.index
+data/vectorstore/*.json
+
+!.gitkeep

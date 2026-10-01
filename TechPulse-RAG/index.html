@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechPulse — technology news, trends and source-grounded AI research.">
+  <title>TechPulse — Understand What's Changing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#home" class="logo">
+      <span class="logo-mark"><i></i><i></i><i></i></span>
+      TECH<span>PULSE</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#latest">Latest</a>
+      <a href="#topics">Topics</a>
+      <a href="#ask">Ask AI</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle dark and light theme">
+      <span id="themeIcon">☼</span>
+    </button>
+  </header>
+
+  <main id="home">
+    <section class="hero page-width">
+      <div class="hero-topline">
+        <span class="yellow-star">✦</span>
+        <span>TECHNOLOGY INTELLIGENCE</span>
+      </div>
+
+      <h1>THE INTERNET<br><span>MOVES FAST.</span></h1>
+      <p class="hero-subtitle">We help you understand what is changing across AI, software, startups and the technology shaping tomorrow.</p>
+
+      <div class="hero-search">
+        <div class="search-heading"><span>✦</span> ASK TECHPULSE</div>
+        <div class="search-line">
+          <input id="heroInput" type="text" placeholder="What's happening in AI right now?">
+          <button id="heroAsk">ASK <b>↗</b></button>
+        </div>
+        <div class="quick-prompts">
+          <button>AI agents this week</button>
+          <button>Latest developer tools</button>
+          <button>Cybersecurity trends</button>
+        </div>
+      </div>
+
+      <div class="hero-strip">
+        <span>AI</span><b>✦</b><span>STARTUPS</span><b>✦</b><span>DEVELOPER TOOLS</span><b>✦</b><span>CYBERSECURITY</span><b>✦</b><span>CLOUD</span>
+      </div>
+    </section>
+
+    <section id="latest" class="latest section-dark">
+      <div class="page-width">
+        <div class="section-intro">
+          <div>
+            <span class="eyebrow">01 / THE SIGNAL</span>
+            <h2>WHAT'S<br><em>HAPPENING?</em></h2>
+          </div>
+          <p>Fresh technology stories collected from across the web, cleaned and organized so you can focus on what matters.</p>
+        </div>
+
+        <div id="featuredNews" class="featured-news"></div>
+        <div id="newsList" class="news-list"></div>
+
+        <button class="outline-btn" id="loadMore">LOAD MORE <span>↓</span></button>
+      </div>
+    </section>
+
+    <section id="topics" class="topics page-width">
+      <div class="section-intro light-intro">
+        <div>
+          <span class="eyebrow">02 / EXPLORE</span>
+          <h2>FOLLOW<br><em>THE SHIFT.</em></h2>
+        </div>
+        <p>Pick a technology and explore the stories shaping the conversation.</p>
+      </div>
+      <div id="topicMarquee" class="topic-marquee"></div>
+      <div id="topicGrid" class="topic-grid"></div>
+    </section>
+
+    <section id="ask" class="ask-section">
+      <div class="ask-inner page-width">
+        <div class="ask-label"><span class="yellow-star">✦</span> 03 / ASK THE INTELLIGENCE</div>
+        <h2>DON'T JUST<br><span>READ IT.</span><br>UNDERSTAND IT.</h2>
+        <p>Ask questions across the technology stories TechPulse has collected. Answers will be grounded in retrieved sources.</p>
+
+        <div class="big-question">
+          <input id="askInput" type="text" placeholder="e.g. What changed in AI agents this week?">
+          <button id="askButton">ASK AI <span>↗</span></button>
+        </div>
+
+        <div class="question-chips">
+          <button>Summarize the latest AI news</button>
+          <button>What are developers talking about?</button>
+          <button>Compare recent AI model launches</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section page-width">
+      <div class="section-intro light-intro">
+        <div>
+          <span class="eyebrow">04 / HOW IT WORKS</span>
+          <h2>FROM THE WEB<br><em>TO INSIGHT.</em></h2>
+        </div>
+      </div>
+
+      <div class="steps">
+        <article><span>01</span><h3>DISCOVER</h3><p>Collect technology stories from permitted web and RSS sources.</p></article>
+        <article><span>02</span><h3>UNDERSTAND</h3><p>Clean, organize, chunk and index the content for semantic retrieval.</p></article>
+        <article><span>03</span><h3>ASK</h3><p>Use RAG to retrieve relevant context and generate source-grounded answers.</p></article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="page-width">
+        <span class="yellow-star">✦</span>
+        <h2>STAY CURIOUS.<br><span>STAY AHEAD.</span></h2>
+        <p>Technology changes every day. Your understanding should keep up.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="page-width footer-inner">
+      <div class="logo">TECH<span>PULSE</span></div>
+      <p>Technology intelligence for curious minds.</p>
+      <span>© 2026 TechPulse</span>
+    </div>
+  </footer>
+
+  <div class="modal hidden" id="answerModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <span class="eyebrow">TECHPULSE AI</span>
+      <h2 id="modalTitle">Your question</h2>
+      <div class="answer-loading" id="loading">
+        <i></i><i></i><i></i>
+      </div>
+      <div id="answer" class="answer hidden">
+        <p>TechPulse will retrieve the most relevant technology stories and generate a concise answer grounded in those sources. This frontend currently uses demo content; the scraper and RAG backend will power this section in the next phase.</p>
+        <h4>SOURCES</h4>
+        <div id="sources"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
