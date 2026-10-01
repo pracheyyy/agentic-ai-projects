@@ -1,0 +1,8 @@
+venv/         
+# → don't upload our Python environment
+.env           
+# → don't upload API keys
+__pycache__/   
+# → don't upload Python cache
+*.pyc          
+# → don't upload compiled Python files
